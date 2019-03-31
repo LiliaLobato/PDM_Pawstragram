@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="logo_width">16dp</dimen>
+    <dimen name="logo_height">400dp</dimen>
+
+    <dimen name="activity_login_text_padding">16dp</dimen>
+    <dimen name="activity_login_icon_margin_bottom">16dp</dimen>
+    <dimen name="activity_login_edit_margin_bottom">23dp</dimen>
+    <dimen name="activity_login_edit_width">200dp</dimen>
+    <dimen name="activity_login_divider_height">2dp</dimen>
+    <dimen name="activity_login_divider_width">300dp</dimen>
+    <dimen name="activity_login_login_width">100dp</dimen>
+    <dimen name="activity_login_text_size">20sp</dimen>
+    <dimen name="activity_login_linear_left_margin">30dp</dimen>
+
+    <dimen name="generic_margin">10dp</dimen>
+    <dimen name="btn_fb_margin">20dp</dimen>
+    <dimen name="btn_fb_width">220dp</dimen>
+    <dimen name="btn_fb_height">60</dimen>
+
+    <dimen name="icon_width">30dp</dimen>
+    <dimen name="icon_height">30dp</dimen>
+
+</resources>

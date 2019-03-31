@@ -10,15 +10,100 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/logo_height"
         android:src="@drawable/logo"
-        android:contentDescription="@string/logo_description"/>
+        android:contentDescription="@string/logo_description"
+        />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center">
 
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/user_ico"
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/icon_height"
+            android:src="@drawable/user"
+            android:layout_marginBottom="@dimen/activity_login_icon_margin_bottom"/>
+
+        <EditText
+            android:id="@+id/activity_login_username_edit"
+            android:layout_width="@dimen/activity_login_edit_width"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_username"
+            android:paddingLeft="@dimen/activity_login_text_padding"
+            android:background="@color/white"
+            android:layout_toEndOf="@id/user_ico"
+            android:layout_toRightOf="@id/user_ico"
+            android:layout_marginBottom="@dimen/activity_login_edit_margin_bottom"/>
+
+        <ImageView
+            android:id="@+id/password_ico"
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/icon_height"
+            android:src="@drawable/password"
+            android:layout_below="@id/user_ico"/>
+
+        <EditText
+            android:id="@+id/activity_login_password_edit"
+            android:layout_width="@dimen/activity_login_edit_width"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_password"
+            android:paddingLeft="@dimen/activity_login_text_padding"
+            android:background="@color/white"
+            android:layout_toEndOf="@id/password_ico"
+            android:layout_toRightOf="@id/password_ico"
+            android:layout_below="@id/activity_login_username_edit"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/password_ico"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/activity_login_linear_left_margin"
+            android:layout_marginTop="@dimen/generic_margin"
+            android:layout_marginBottom="@dimen/generic_margin">
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="@dimen/activity_login_login_width"
+                android:layout_height="wrap_content"
+                android:text="@string/login_text"
+                android:textSize="@dimen/activity_login_text_size"
+                android:background="@drawable/btn_round"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/or_text"
+                android:textSize="@dimen/activity_login_text_size"
+                android:textColor="@color/white"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sing_up_text"
+                android:textSize="@dimen/activity_login_text_size"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="@dimen/activity_login_divider_width"
+        android:layout_height="@dimen/activity_login_divider_height"
+        android:background="@color/white"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:layout_width="@dimen/btn_fb_width"
+        android:layout_height="@dimen/btn_fb_height"
+        android:background="@drawable/fb_template"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
 
 
 
