@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Pawstragram</string>
+    <string name="app_name">Pawstagram</string>
+
+
+    <string name="logo_description">Pawstagram Logo</string>
+
 </resources>
