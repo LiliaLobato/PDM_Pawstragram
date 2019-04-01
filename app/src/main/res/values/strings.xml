@@ -3,5 +3,10 @@
 
 
     <string name="logo_description">Pawstagram Logo</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="login_text">Sign in</string>
+    <string name="or_text">\ Or \ </string>
+    <string name="sing_up_text">Sign up</string>
 
 </resources>
