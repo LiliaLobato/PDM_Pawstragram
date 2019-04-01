@@ -36,7 +36,7 @@ public class AdapterUserSearch extends RecyclerView.Adapter<AdapterUserSearch.Vi
     @Override
     public void onBindViewHolder(@NonNull final AdapterUserSearch.ViewHolder holder, final int position) {
         holder.profilePicture.setImageBitmap(mDataSet.get(position).getProfileImage());
-        holder.content.setImageBitmap(mDataSet.get(position).getContent());
+        holder.name.setText(mDataSet.get(position).getName());
         holder.username.setText(mDataSet.get(position).getUsername());
     }
 
@@ -52,8 +52,9 @@ public class AdapterUserSearch extends RecyclerView.Adapter<AdapterUserSearch.Vi
 
         public ViewHolder(View v) {
             super(v);
-            profilePicture = v.findViewById(R.id.profile_picture);
-            username = v.findViewById(R.id.item_post_user);
+            profilePicture = v.findViewById(R.id.item_user_search_profile_picture);
+            username = v.findViewById(R.id.item_user_search_username);
+            name = v.findViewById(R.id.item_user_search_name);
         }
     }
 }

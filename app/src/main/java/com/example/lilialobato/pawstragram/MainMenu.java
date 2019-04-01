@@ -42,6 +42,13 @@ public class MainMenu extends Activity {
 
     }
 
+    public void openMenu(View v) {
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.container, new FragmentHome());
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
+
     public void openSearch(View v){
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.container, new FragmentSearch());
