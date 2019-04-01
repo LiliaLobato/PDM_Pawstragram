@@ -71,6 +71,7 @@
                 android:text="@string/login_text"
                 android:textSize="@dimen/activity_login_text_size"
                 android:background="@drawable/btn_round"
+                android:onClick="login"
                 />
             <TextView
                 android:layout_width="wrap_content"
@@ -85,6 +86,7 @@
                 android:text="@string/sing_up_text"
                 android:textSize="@dimen/activity_login_text_size"
                 android:textColor="@color/white"
+                android:onClick="signup"
                 />
 
         </LinearLayout>

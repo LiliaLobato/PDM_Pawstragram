@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/back"
         android:textColor="@color/white"
-        android:onClick="OnClickListener"
+        android:onClick="goBack"
         android:textSize="@dimen/activity_signup_text_size" />
 
     <ImageView
@@ -98,6 +98,7 @@
         android:textColor="@color/white"
         android:textSize="@dimen/activity_signup_text_size"
         android:background="@drawable/btn_round"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:onClick="login"/>
 
 </LinearLayout>

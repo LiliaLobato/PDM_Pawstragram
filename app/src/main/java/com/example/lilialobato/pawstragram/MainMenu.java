@@ -38,10 +38,6 @@ public class MainMenu extends Activity {
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
-
-
-
-
     }
 
 
