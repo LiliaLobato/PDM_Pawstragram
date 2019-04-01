@@ -22,13 +22,26 @@
         android:paddingLeft="5dp"
         android:src="@drawable/profile_placeholder"
         app:civ_border_color="#FF000000" />
+
+    <TextView
+        android:id="@+id/item_post_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:layout_toRightOf="@+id/profile_picture"
+        android:textSize="@dimen/activity_login_text_size"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="25dp"
+        />
     
-    <ImageView
+    <Button
+        android:id="@+id/item_post_menu"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentRight="true"
         android:layout_marginTop="15dp"
-        android:src="@drawable/menu_icon" />
+        android:layout_marginRight="10dp"
+        android:background="@drawable/menu_icon" />
 
     <ImageView
         android:id="@+id/item_post_content"
@@ -36,18 +49,22 @@
         android:layout_height="280dp"
         android:layout_below="@+id/profile_picture"
         android:src="@drawable/dummy_image"/>
-    <ImageView
+    <Button
+        android:id="@+id/item_post_like"
         android:layout_below="@+id/item_post_content"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:paddingLeft="5dp"
-        android:src="@drawable/like" />
-    <ImageView
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/like" />
+    <Button
+        android:id="@+id/item_post_share"
         android:layout_below="@+id/item_post_content"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:paddingRight="10dp"
-        android:src="@drawable/share_ico"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/share_ico"
         android:layout_alignParentRight="true"/>
 
 
