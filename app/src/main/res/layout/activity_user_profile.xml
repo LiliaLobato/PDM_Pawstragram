@@ -30,8 +30,8 @@
         <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/profile_picture"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:padding="5dp"
             android:src="@drawable/profile_placeholder"
             app:civ_border_color="#FF000000" />
@@ -121,7 +121,7 @@
             <Button
                 android:id="@+id/btn_signup"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
                 android:text="EDIT PROFILE"
                 android:textColor="@color/button_color"
                 android:textSize="@dimen/activity_signup_text_size"
@@ -155,8 +155,8 @@
             android:gravity="center"
             android:layout_weight="1">
             <ImageButton
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:paddingLeft="5dp"
                 android:background="@color/white"
                 android:src="@drawable/grid"
@@ -169,8 +169,8 @@
             android:gravity="center"
             android:layout_weight="1">
         <ImageButton
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:paddingLeft="5dp"
             android:background="@color/white"
             android:src="@drawable/pseudofeed"
