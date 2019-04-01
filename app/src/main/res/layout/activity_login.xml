@@ -70,7 +70,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/login_text"
                 android:textSize="@dimen/activity_login_text_size"
-                android:background="@drawable/btn_round"/>
+                android:background="@drawable/btn_round"
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -98,12 +99,9 @@
         android:background="@color/white"
         android:layout_gravity="center"/>
 
-    <Button
-        android:layout_width="@dimen/btn_fb_width"
-        android:layout_height="@dimen/btn_fb_height"
-        android:background="@drawable/fb_template"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+
+
+
 
 
 
