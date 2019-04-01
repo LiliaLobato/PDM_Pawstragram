@@ -50,6 +50,7 @@
             android:layout_width="@dimen/icon_width"
             android:layout_height="@dimen/icon_height"
             android:src="@drawable/user_gray"
+            android:onClick="goPerfil"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
             android:layout_weight="1"/>

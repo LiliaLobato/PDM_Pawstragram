@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <activity android:name=".MainMenu"></activity>
+        <activity android:name=".ActivitySignup" />
+        <activity android:name=".ActivityUserProfile"/>
+
+
         <activity android:name=".ActivityLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,16 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-        <activity android:name=".MainMenu">
-
-        </activity>
-        <activity android:name=".ActivitySignup"/>
-        <activity android:name=".ActivityUserProfile" >
-
-        </activity>
-        <activity android:name=".ActivityDetails"></activity>
+        <activity android:name=".ActivityDetails" />
+        <activity android:name=".ActivityEditProfile"></activity>
     </application>
 
 </manifest>

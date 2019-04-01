@@ -15,7 +15,7 @@
 
     <dimen name="activity_signup_icon_margin_bottom">10dp</dimen>
     <dimen name="activity_signup_edit_margin_bottom">20dp</dimen>
-    <dimen name="activity_signup_text_size">20sp</dimen>
+    <dimen name="activity_signup_text_size">15sp</dimen>
     <dimen name="activity_signup_edit_width">200dp</dimen>
     <dimen name="activity_signup_text_padding">16dp</dimen>
     <dimen name="activity_signup_signup_width">100dp</dimen>

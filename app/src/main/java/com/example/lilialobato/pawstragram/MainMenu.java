@@ -5,6 +5,7 @@ import android.app.Activity;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 
 
@@ -47,6 +48,12 @@ public class MainMenu extends Activity {
         fragmentTransaction.replace(R.id.container, new FragmentHome());
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
+    }
+
+    public void goPerfil(View v) {
+        Intent intent = new Intent(this, ActivityUserProfile.class);
+        this.startActivity(intent);
+
     }
 
     public void openSearch(View v){
