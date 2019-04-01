@@ -8,4 +8,5 @@
     <color name="background_gradient_start">#FFA291</color>
     <color name="background_gradient_end">#FF32A0</color>
     <color name="text_color">#DBA770</color>
+    <color name="button_color">#70676e</color>
 </resources>

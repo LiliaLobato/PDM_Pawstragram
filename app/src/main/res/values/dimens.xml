@@ -13,6 +13,14 @@
     <dimen name="activity_login_text_size">20sp</dimen>
     <dimen name="activity_login_linear_left_margin">30dp</dimen>
 
+    <dimen name="activity_signup_icon_margin_bottom">10dp</dimen>
+    <dimen name="activity_signup_edit_margin_bottom">20dp</dimen>
+    <dimen name="activity_signup_text_size">20sp</dimen>
+    <dimen name="activity_signup_edit_width">200dp</dimen>
+    <dimen name="activity_signup_text_padding">16dp</dimen>
+    <dimen name="activity_signup_signup_width">100dp</dimen>
+    <dimen name="activity_signup_icon_back">60dp</dimen>
+
     <dimen name="generic_margin">10dp</dimen>
     <dimen name="btn_fb_margin">20dp</dimen>
     <dimen name="btn_fb_width">220dp</dimen>
