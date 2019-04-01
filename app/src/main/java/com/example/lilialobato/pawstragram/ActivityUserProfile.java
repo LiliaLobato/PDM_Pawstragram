@@ -1,5 +1,6 @@
 package com.example.lilialobato.pawstragram;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
-public class ActivityUserProfile extends AppCompatActivity {
+public class ActivityUserProfile extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +19,7 @@ public class ActivityUserProfile extends AppCompatActivity {
         gridview.setAdapter(new ImageAdapter(this));
 
 /*
-Creando una nueva escucha para los elementos del Grid
+Creando una nueva escucha para los elementos del grid
  */
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
