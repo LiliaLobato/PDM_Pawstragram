@@ -123,6 +123,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:text="EDIT PROFILE"
+                android:onClick="goEdit"
                 android:textColor="@color/button_color"
                 android:textSize="@dimen/activity_signup_text_size"
                 android:background="@drawable/btn_round_profile"

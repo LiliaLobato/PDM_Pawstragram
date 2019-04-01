@@ -34,4 +34,9 @@ Creando una nueva escucha para los elementos del grid
         });
     }
 
+    public void goEdit(View v) {
+        Intent intent = new Intent(this, ActivityEditProfile.class);
+        this.startActivity(intent);
+    }
+
 }

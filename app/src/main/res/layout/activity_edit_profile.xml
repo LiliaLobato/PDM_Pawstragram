@@ -20,11 +20,13 @@
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="goreturn"
             android:background="@drawable/check"/>
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/cross"
+            android:onClick="goreturn"
             android:layout_alignParentRight="true"/>
     </RelativeLayout>
 
