@@ -10,7 +10,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ActivityUserProfile">
-
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/background_gradient_start"
+    android:text="USER NAME"
+    android:paddingLeft="10dp"
+    android:textSize="30dp"
+    android:gravity="center_vertical"/>
     <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -152,7 +159,7 @@
                 android:layout_height="80dp"
                 android:paddingLeft="5dp"
                 android:background="@color/white"
-                android:src="@drawable/Grid"
+                android:src="@drawable/grid"
                 android:scaleType="fitXY"
                 />
         </LinearLayout>
@@ -166,7 +173,7 @@
             android:layout_height="80dp"
             android:paddingLeft="5dp"
             android:background="@color/white"
-            android:src="@drawable/PseudoFeed"
+            android:src="@drawable/pseudofeed"
             android:scaleType="fitXY"
             />
         </LinearLayout>
@@ -180,7 +187,7 @@
         android:verticalSpacing="10dp"
         android:horizontalSpacing="10dp"
         android:stretchMode="columnWidth"
-        
+
         android:gravity="center"/>
 </LinearLayout>
 </ScrollView>
