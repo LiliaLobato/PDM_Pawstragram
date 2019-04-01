@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivitySignup"
+    android:orientation="vertical"
+    android:background="@drawable/background_gradient">
+
+    <Button
+        android:id="@+id/btn_signup_back"
+        android:layout_width="@dimen/activity_signup_icon_back"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"
+        android:textColor="@color/white"
+        android:onClick="OnClickListener"
+        android:textSize="@dimen/activity_signup_text_size" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/logo_height"
+        android:src="@drawable/logo"
+        android:contentDescription="@string/logo_description"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/user_ico"
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/icon_height"
+            android:src="@drawable/user"
+            android:layout_marginBottom="@dimen/activity_signup_icon_margin_bottom"/>
+
+        <EditText
+            android:id="@+id/activity_signup_username_edit"
+            android:layout_width="@dimen/activity_signup_edit_width"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_username"
+            android:paddingLeft="@dimen/activity_signup_text_padding"
+            android:background="@color/white"
+            android:layout_toEndOf="@id/user_ico"
+            android:layout_toRightOf="@id/user_ico"
+            android:layout_marginBottom="@dimen/activity_signup_edit_margin_bottom"/>
+
+        <ImageView
+            android:id="@+id/password_confirm"
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/icon_height"
+            android:src="@drawable/password"
+            android:layout_below="@id/user_ico"
+            android:layout_marginBottom="@dimen/activity_signup_icon_margin_bottom"/>
+
+        <EditText
+            android:id="@+id/activity_signup_password_edit"
+            android:layout_width="@dimen/activity_signup_edit_width"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_password"
+            android:paddingLeft="@dimen/activity_signup_text_padding"
+            android:background="@color/white"
+            android:layout_toEndOf="@id/password_ico"
+            android:layout_toRightOf="@id/password_ico"
+            android:layout_below="@id/activity_signup_username_edit"
+            android:layout_marginBottom="@dimen/activity_signup_edit_margin_bottom"/>
+
+        <ImageView
+            android:id="@+id/password_ico"
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/icon_height"
+            android:src="@drawable/password"
+            android:layout_below="@id/password_confirm"
+            android:layout_marginBottom="@dimen/activity_signup_icon_margin_bottom"/>
+
+        <EditText
+            android:id="@+id/activity_signup_password_confirm"
+            android:layout_width="@dimen/activity_signup_edit_width"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_password_confirm"
+            android:paddingLeft="@dimen/activity_signup_text_padding"
+            android:background="@color/white"
+            android:layout_toEndOf="@id/password_ico"
+            android:layout_toRightOf="@id/password_ico"
+            android:layout_below="@id/activity_signup_password_edit"
+            android:layout_marginBottom="@dimen/activity_signup_edit_margin_bottom"/>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_signup"
+        android:layout_width="@dimen/activity_signup_signup_width"
+        android:layout_height="wrap_content"
+        android:text="@string/sing_up_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/activity_signup_text_size"
+        android:background="@drawable/btn_round"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
