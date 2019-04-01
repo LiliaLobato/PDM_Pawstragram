@@ -18,4 +18,8 @@ public class ActivityLogin extends Activity {
         Intent intent = new Intent(this, MainMenu.class);
         this.startActivity(intent);
     }
+    public void signup(View v){
+        Intent intent = new Intent(this, ActivitySignup.class);
+        this.startActivity(intent);
+    }
 }

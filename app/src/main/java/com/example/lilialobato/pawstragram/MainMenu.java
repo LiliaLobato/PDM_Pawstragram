@@ -8,10 +8,12 @@ import android.app.FragmentTransaction;
 import android.os.Bundle;
 
 
+import android.view.View;
 import android.widget.LinearLayout;
 
 
 import com.example.lilialobato.pawstragram.fragments.FragmentHome;
+import com.example.lilialobato.pawstragram.fragments.FragmentSearch;
 
 public class MainMenu extends Activity {
 
@@ -38,10 +40,13 @@ public class MainMenu extends Activity {
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
+    }
 
-
-
-
+    public void openSearch(View v){
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.container, new FragmentSearch());
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
 
