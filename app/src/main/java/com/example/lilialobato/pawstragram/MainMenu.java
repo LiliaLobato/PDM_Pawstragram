@@ -30,13 +30,8 @@ public class MainMenu extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         fragmentManager = getFragmentManager();
-
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-
-
         container = findViewById(R.id.container);
-
         fragmentTransaction.replace(R.id.container, new FragmentHome());
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();

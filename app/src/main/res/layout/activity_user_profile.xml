@@ -16,7 +16,7 @@
     android:background="@color/background_gradient_start"
     android:text="USER NAME"
     android:paddingLeft="10dp"
-    android:textSize="30dp"
+    android:textSize="30sp"
     android:gravity="center_vertical"/>
     <LinearLayout
     android:layout_width="match_parent"

@@ -38,9 +38,10 @@ public class FragmentHome extends Fragment {
         // delete later
 
         Bitmap profile = BitmapFactory.decodeResource(getResources(), R.drawable.delete_profile_image);
+        Bitmap posty = BitmapFactory.decodeResource(getResources(), R.drawable.p1);
 
-        dataSet.add(new Post("Bruno", profile, profile ));
-        dataSet.add(new Post("Lilia", profile, profile ));
+        dataSet.add(new Post("Bruno", posty, profile ));
+        dataSet.add(new Post("Lilia", posty, profile ));
         //end delete later
         mAdapter = new AdapterPost(getActivity(), dataSet);
         recyclerView.setAdapter(mAdapter);
