@@ -4,7 +4,7 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_view"
     android:layout_width="match_parent"
-    android:layout_height="480dp"
+    android:layout_height="430dp"
     android:layout_margin="5dp"
     android:scrollbarStyle="outsideOverlay"
     card_view:cardCornerRadius="4dp">
@@ -48,6 +48,7 @@
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:layout_below="@+id/profile_picture"
+        android:layout_marginTop="10dp"
         android:src="@drawable/dummy_image"/>
     <Button
         android:id="@+id/item_post_like"
@@ -56,7 +57,7 @@
         android:layout_height="40dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/like" />
+        android:background="@drawable/no_like" />
     <Button
         android:id="@+id/item_post_share"
         android:layout_below="@+id/item_post_content"
