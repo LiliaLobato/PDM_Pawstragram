@@ -4,7 +4,7 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_view"
     android:layout_width="match_parent"
-    android:layout_height="430dp"
+    android:layout_height="400dp"
     android:layout_margin="5dp"
     android:scrollbarStyle="outsideOverlay"
     card_view:cardCornerRadius="4dp">
@@ -17,8 +17,8 @@
     <de.hdodenhof.circleimageview.CircleImageView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/profile_picture"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:paddingLeft="5dp"
         android:src="@drawable/profile_placeholder"
         app:civ_border_color="#FF000000" />
@@ -31,17 +31,17 @@
         android:layout_toRightOf="@+id/profile_picture"
         android:textSize="@dimen/activity_login_text_size"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         />
     
     <Button
         android:id="@+id/item_post_menu"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/menu_icon" />
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/ic_tredots" />
 
     <ImageView
         android:id="@+id/item_post_content"
@@ -53,11 +53,11 @@
     <Button
         android:id="@+id/item_post_like"
         android:layout_below="@+id/item_post_content"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:background="@drawable/no_like" />
+        android:background="@drawable/ic_like" />
     <Button
         android:id="@+id/item_post_share"
         android:layout_below="@+id/item_post_content"

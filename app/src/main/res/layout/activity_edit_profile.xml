@@ -3,130 +3,166 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-
-    tools:context=".ActivityEditProfile">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content"
-        android:background="@color/background_gradient_start">
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="goreturn"
-            android:background="@drawable/check"/>
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/cross"
-            android:onClick="goreturn"
-            android:layout_alignParentRight="true"/>
-    </RelativeLayout>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
-        android:padding="10dp"
-        tools:context=".ActivityUserProfile">
-            <de.hdodenhof.circleimageview.CircleImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ActivityEditProfile">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:background="@color/white"
+            android:gravity="center"
+            android:id="@+id/tab"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btn_post"
+                android:layout_width="@dimen/icon_width"
+                android:layout_height="@dimen/icon_height"
+                android:layout_gravity="center"
+                android:onClick="goreturn"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_backdark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/toolbar_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="20dp"
+                    android:src="@drawable/ic_pawstagram_letras" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp"
+            tools:context=".ActivityUserProfile">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/profile_picture"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:padding="5dp"
+                android:paddingBottom="30dp"
                 android:src="@drawable/profile_placeholder"
-                app:civ_border_color="#FF000000"
-                android:paddingBottom="30dp"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="NAME"
-            android:textSize="15dp"
-            android:textStyle="bold"/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:id="@+id/edit_name"
-            android:hint="NAME LASTNAME"/>
-        <TextView
-            android:paddingTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="USERNAME"
-            android:textSize="15dp"
-            android:textStyle="bold"/>
-        <EditText
-            android:id="@+id/edit_username"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:hint="USERNAME"/>
-        <TextView
-            android:paddingTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="BIOGRAPHY"
-            android:textSize="15dp"
-            android:textStyle="bold"/>
-        <EditText
-            android:id="@+id/edit_biography"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:hint="LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA ."
-            />
-        <TextView
-            android:paddingTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="GENDER"
-            android:textSize="15dp"
-            android:textStyle="bold"/>
-        <EditText
-            android:id="@+id/edit_gender"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:hint="GENDER"/>
-        <TextView
-            android:paddingTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="PASSWORD"
-            android:textSize="15dp"
-            android:textStyle="bold"/>
-        <EditText
-            android:id="@+id/edit_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:hint="*********"/>
-        <TextView
-            android:paddingTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="LANGUAGE"
-            android:textSize="15dp"
-            android:textStyle="bold"/>
-        <EditText
-            android:id="@+id/edit_language"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:hint="ENGLISH"/>
+                app:civ_border_color="#FF000000" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NAME"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="NAME LASTNAME"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="USERNAME"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="USERNAME"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="BIOGRAPHY"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_biography"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA ."
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="GENDER"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="GENDER"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text="PASSWORD"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="*********"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="LANGUAGE"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ENGLISH"
+                android:textSize="15dp" />
+
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
 </ScrollView>
