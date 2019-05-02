@@ -1,104 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:id="@+id/login_container"
+android:padding="40dp"
+android:background="@drawable/animation_colors">
+
+
+<ImageView
+    android:layout_width="250dp"
+    android:layout_height="250dp"
+    android:layout_gravity="center"
+    android:src="@drawable/ic_pawstagram_logo"
+    android:layout_marginBottom="40dp"/>
+
+
+<EditText
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ActivitySignup"
-    android:orientation="vertical"
-    android:background="@drawable/background_gradient">
-
-    <Button
-        android:id="@+id/btn_signup_back"
-        android:layout_width="@dimen/activity_signup_icon_back"
-        android:layout_height="wrap_content"
-        android:background="@drawable/back"
-        android:textColor="@color/white"
-        android:onClick="goBack"
-        android:textSize="@dimen/activity_signup_text_size" />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/logo_height"
-        android:src="@drawable/logo"
-        android:contentDescription="@string/logo_description"
-        />
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-
-        <ImageView
-            android:id="@+id/user_ico"
-            android:layout_width="@dimen/icon_width"
-            android:layout_height="@dimen/icon_height"
-            android:src="@drawable/user"
-            android:layout_marginBottom="@dimen/activity_signup_icon_margin_bottom"/>
-
-        <EditText
-            android:id="@+id/activity_signup_username_edit"
-            android:layout_width="@dimen/activity_signup_edit_width"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_username"
-            android:paddingLeft="@dimen/activity_signup_text_padding"
-            android:background="@color/white"
-            android:layout_toEndOf="@id/user_ico"
-            android:layout_toRightOf="@id/user_ico"
-            android:layout_marginBottom="@dimen/activity_signup_edit_margin_bottom"/>
-
-        <ImageView
-            android:id="@+id/password_confirm"
-            android:layout_width="@dimen/icon_width"
-            android:layout_height="@dimen/icon_height"
-            android:src="@drawable/password"
-            android:layout_below="@id/user_ico"
-            android:layout_marginBottom="@dimen/activity_signup_icon_margin_bottom"/>
-
-        <EditText
-            android:id="@+id/activity_signup_password_edit"
-            android:layout_width="@dimen/activity_signup_edit_width"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_password"
-            android:paddingLeft="@dimen/activity_signup_text_padding"
-            android:background="@color/white"
-            android:layout_toEndOf="@id/password_ico"
-            android:layout_toRightOf="@id/password_ico"
-            android:layout_below="@id/activity_signup_username_edit"
-            android:layout_marginBottom="@dimen/activity_signup_edit_margin_bottom"/>
-
-        <ImageView
-            android:id="@+id/password_ico"
-            android:layout_width="@dimen/icon_width"
-            android:layout_height="@dimen/icon_height"
-            android:src="@drawable/password"
-            android:layout_below="@id/password_confirm"
-            android:layout_marginBottom="@dimen/activity_signup_icon_margin_bottom"/>
-
-        <EditText
-            android:id="@+id/activity_signup_password_confirm"
-            android:layout_width="@dimen/activity_signup_edit_width"
-            android:layout_height="wrap_content"
-            android:hint="@string/hint_password_confirm"
-            android:paddingLeft="@dimen/activity_signup_text_padding"
-            android:background="@color/white"
-            android:layout_toEndOf="@id/password_ico"
-            android:layout_toRightOf="@id/password_ico"
-            android:layout_below="@id/activity_signup_password_edit"
-            android:layout_marginBottom="@dimen/activity_signup_edit_margin_bottom"/>
+    android:layout_height="50dp"
+    android:hint="Username"
+    android:textColor="#ffffff"
+    android:textSize="20sp"
+    android:backgroundTint="#fff"
+    android:drawableLeft="@drawable/ic_smile"
+    android:id="@+id/activity_signup_username_edit"
+    android:drawablePadding="10dp"
+    />
 
 
-    </RelativeLayout>
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:hint="Password"
+    android:textColor="#ffffff"
+    android:textSize="20sp"
+    android:backgroundTint="#fff"
+    android:drawableLeft="@drawable/ic_out"
+    android:inputType="textPassword"
+    android:id="@+id/activity_signup_password_edit"
+    android:drawablePadding="10dp"
+    />
 
-    <Button
-        android:id="@+id/btn_signup"
-        android:layout_width="@dimen/activity_signup_signup_width"
-        android:layout_height="wrap_content"
-        android:text="@string/sing_up_text"
-        android:textColor="@color/white"
-        android:textSize="@dimen/activity_signup_text_size"
-        android:background="@drawable/btn_round"
-        android:layout_gravity="center"
-        android:onClick="login"/>
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:hint="Confirm Password"
+    android:textColor="#ffffff"
+    android:textSize="20sp"
+    android:backgroundTint="#fff"
+    android:drawableLeft="@drawable/ic_out"
+    android:inputType="textPassword"
+    android:id="@+id/activity_signup_password_confirm"
+    android:drawablePadding="10dp"
+    />
+
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp"
+    android:id="@+id/sign_up_btn"
+    android:text="Sign Up"
+    android:onClick="login"
+    android:textColor="#ffffff"
+    android:background="#79a209df"
+    android:textAllCaps="false"
+    />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="16dp"
+    android:text="Have Account? Log In"
+    android:onClick="goBack"
+    android:textColor="#ffffff"
+    android:textSize="16sp"
+    android:id="@+id/go_to_login_btn"/>
 
 </LinearLayout>
+
