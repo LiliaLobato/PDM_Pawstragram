@@ -14,21 +14,21 @@
 
 
         <LinearLayout
+            android:id="@+id/tab"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             android:background="@color/white"
             android:gravity="center"
-            android:id="@+id/tab"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
 
             <ImageView
                 android:id="@+id/btn_post"
                 android:layout_width="@dimen/icon_width"
                 android:layout_height="@dimen/icon_height"
                 android:layout_gravity="center"
-                android:onClick="goreturn"
                 android:layout_marginLeft="5dp"
+                android:onClick="goreturn"
                 android:src="@drawable/ic_backdark" />
 
             <LinearLayout
@@ -57,7 +57,7 @@
             android:gravity="center"
             android:orientation="vertical"
             android:padding="10dp"
-            tools:context=".ActivityUserProfile">
+            tools:context=".ActivityEditProfile">
 
             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/profile_picture"
@@ -69,100 +69,231 @@
                 app:civ_border_color="#FF000000" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/edit_image"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="NAME"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="15dp"
-                android:textStyle="bold" />
+                android:layout_below="@+id/edit_profile_picture"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:text="Edit Photo" />
 
-            <EditText
-                android:id="@+id/edit_name"
+            <RelativeLayout
+                android:id="@+id/general_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="NAME LASTNAME"
-                android:textSize="15dp" />
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:padding="10dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:text="USERNAME"
-                android:textSize="15dp"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/general_data_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:text="General Data"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp" />
 
-            <EditText
-                android:id="@+id/edit_username"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="USERNAME"
-                android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/edit_profile_name_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/general_data_tv"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawablePadding="5dp"
+                    android:text="NAME"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:text="BIOGRAPHY"
-                android:textSize="15dp"
-                android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/edit_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_profile_name_tag"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawablePadding="5dp"
+                    android:hint="NAME LASTNAME"
+                    android:textColor="@color/colorGray"
+                    android:textSize="15dp" />
 
-            <EditText
-                android:id="@+id/edit_biography"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA ."
-                android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/edit_profile_username_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_name"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawablePadding="5dp"
+                    android:paddingTop="5dp"
+                    android:text="USERNAME"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:text="GENDER"
-                android:textSize="15dp"
-                android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/edit_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_profile_username_tag"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawablePadding="5dp"
+                    android:hint="USERNAME"
+                    android:textColor="@color/colorGray"
+                    android:textSize="15dp" />
 
-            <EditText
-                android:id="@+id/edit_gender"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="GENDER"
-                android:textSize="15dp" />
+                <TextView
+                    android:id="@+id/edit_profile_bio_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_username"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawablePadding="5dp"
+                    android:paddingTop="5dp"
+                    android:text="BIOGRAPHY"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:text="PASSWORD"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="15dp"
-                android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/edit_biography"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_profile_bio_tag"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawablePadding="5dp"
+                    android:hint="LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT, SED DO EIUSMOD TEMPOR INCIDIDUNT UT LABORE ET DOLORE MAGNA ALIQUA. UT ENIM AD MINIM VENIAM, QUIS NOSTRUD EXERCITATION ULLAMCO LABORIS NISI UT ALIQUIP EX EA ."
+                    android:textColor="@color/colorGray"
+                    android:textSize="15dp" />
 
-            <EditText
-                android:id="@+id/edit_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="*********"
-                android:textSize="15dp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="5dp"
-                android:textColor="@color/colorPrimaryDark"
-                android:text="LANGUAGE"
-                android:textSize="15dp"
-                android:textStyle="bold" />
+            </RelativeLayout>
 
-            <EditText
-                android:id="@+id/edit_language"
+
+            <RelativeLayout
+                android:id="@+id/private_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="ENGLISH"
-                android:textSize="15dp" />
+                android:layout_below="@+id/general_layout"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:background="@color/white">
+
+
+                <TextView
+                    android:id="@+id/private_data_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:text="Private Data"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/edit_profile_email_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/private_data_tv"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawablePadding="5dp"
+                    android:paddingTop="5dp"
+                    android:text="EMAIL"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_profile_email_tag"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawablePadding="5dp"
+                    android:text="email"
+                    android:textColor="@color/colorGray"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/edit_profile_password_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_email"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawablePadding="5dp"
+                    android:paddingTop="5dp"
+                    android:text="PASSWORD"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_profile_password_tag"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawablePadding="5dp"
+                    android:hint="*********"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/edit_profile_conf_password_tag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_password"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawablePadding="5dp"
+                    android:paddingTop="5dp"
+                    android:text="CONFIRM PASSWORD"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edit_conf_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edit_profile_conf_password_tag"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:drawablePadding="5dp"
+                    android:hint="*********"
+                    android:textSize="15dp" />
+
+
+            </RelativeLayout>
 
         </LinearLayout>
+
+
     </LinearLayout>
+
+
 </ScrollView>
