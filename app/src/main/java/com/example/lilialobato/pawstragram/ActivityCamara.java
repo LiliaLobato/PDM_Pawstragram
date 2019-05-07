@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+//TODO errores en camara, implementar tomar foto
 public class ActivityCamara extends AppCompatActivity {
     private static final int SELECTED_PIC = 1;
     ImageView imageView;
