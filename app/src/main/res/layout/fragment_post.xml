@@ -12,8 +12,9 @@
         android:gravity="center"
         android:orientation="horizontal">
 
+        <!-- TODO: open camara, add share button, add setting, add on click likes -->
         <ImageView
-            android:id="@+id/btn_post"
+            android:id="@+id/btn_camara"
             android:layout_width="@dimen/icon_width"
             android:layout_height="@dimen/icon_height"
             android:layout_gravity="center"

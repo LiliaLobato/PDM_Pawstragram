@@ -1,6 +1,7 @@
 package com.example.lilialobato.pawstragram.fragments;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
@@ -10,7 +11,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
+import com.example.lilialobato.pawstragram.ActivityCamara;
+import com.example.lilialobato.pawstragram.ActivityEditProfile;
 import com.example.lilialobato.pawstragram.R;
 import com.example.lilialobato.pawstragram.adapters.AdapterPost;
 import com.example.lilialobato.pawstragram.beans.Post;
@@ -22,6 +26,7 @@ public class FragmentHome extends Fragment {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private ArrayList<Post> dataSet;
+    ImageView imageView;
 
     public FragmentHome() {
     }
@@ -33,6 +38,16 @@ public class FragmentHome extends Fragment {
         recyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(mLayoutManager);
+
+        imageView = (ImageView) rootView.findViewById(R.id.btn_camara);
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ActivityCamara.class);
+                startActivity(intent);
+            }
+        });
 
         dataSet = new ArrayList<Post>();
         // delete later
@@ -49,3 +64,4 @@ public class FragmentHome extends Fragment {
         return rootView;
     }
 }
+
