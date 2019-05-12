@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "390544441830",
+    "firebase_url": "https://pawstagram-4f489.firebaseio.com",
+    "project_id": "pawstagram-4f489",
+    "storage_bucket": "pawstagram-4f489.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390544441830:android:22e5f188e1182804",
+        "android_client_info": {
+          "package_name": "com.example.lilialobato.pawstragram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "390544441830-rld41iv9evgfnd88ihrnmc1sca5fhq7k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lilialobato.pawstragram",
+            "certificate_hash": "0607ca6b5539c4bde9be4010f4a401fa5fc67b4f"
+          }
+        },
+        {
+          "client_id": "390544441830-e6qajci5kvkouvo9b38ca49nao4ttjt8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7C7XQrGg011G-qjk0ZD9t-mRYZqYU6Tc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "390544441830-e6qajci5kvkouvo9b38ca49nao4ttjt8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

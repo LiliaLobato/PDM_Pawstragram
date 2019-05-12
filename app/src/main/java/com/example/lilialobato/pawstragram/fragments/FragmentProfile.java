@@ -11,6 +11,8 @@ import android.widget.ImageView;
 import com.example.lilialobato.pawstragram.ActivityEditProfile;
 import com.example.lilialobato.pawstragram.R;
 
+
+
 public class FragmentProfile extends Fragment {
 
     ImageView imageView;
@@ -33,5 +35,6 @@ public class FragmentProfile extends Fragment {
 
         return rootView;
     }
+
 
 }

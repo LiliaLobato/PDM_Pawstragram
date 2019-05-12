@@ -24,6 +24,7 @@ public class MainMenu extends Activity {
     FragmentProfile fragmentProfile;
     FragmentSearch fragmentSearch;
 
+
     LinearLayout container;
 
     FragmentManager fragmentManager;
@@ -36,13 +37,14 @@ public class MainMenu extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         fragmentManager = getFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        container = findViewById(R.id.container);
-        fragmentTransaction.replace(R.id.container, new FragmentHome());
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
-        exit = true;
 
+
+        container = findViewById(R.id.container);
+        fragmentHome = new FragmentHome();
+        fragmentProfile = new FragmentProfile();
+        fragmentSearch = new FragmentSearch();
+
+        openMenu(new View(this));
     }
 
     @Override
@@ -54,7 +56,7 @@ public class MainMenu extends Activity {
             startActivity(homeIntent);
         }
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.container, new FragmentHome());
+        fragmentTransaction.replace(R.id.container, fragmentHome);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
         exit = true;
@@ -63,30 +65,26 @@ public class MainMenu extends Activity {
     public void openMenu(View v) {
         exit = true;
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.container, new FragmentHome());
+        fragmentTransaction.replace(R.id.container, fragmentHome);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
-
     }
 
     public void goPerfil(View v) {
         exit = false;
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.container, new FragmentProfile());
+        fragmentTransaction.replace(R.id.container, fragmentProfile);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
-
-
     }
 
     public void openSearch(View v){
         exit = false;
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.container, new FragmentSearch());
+        fragmentTransaction.replace(R.id.container, fragmentSearch);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
 
     }
-
 
 }

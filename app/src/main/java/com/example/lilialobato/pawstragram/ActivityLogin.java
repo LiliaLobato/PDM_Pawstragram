@@ -5,12 +5,20 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class ActivityLogin extends Activity {
 
@@ -19,6 +27,9 @@ public class ActivityLogin extends Activity {
 
     EditText username_et,password_et;
     ProgressDialog mProgrssDialog;
+    private FirebaseAuth mAuth;
+
+    private static final String TAG = "ActivityLogin";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +45,8 @@ public class ActivityLogin extends Activity {
         username_et = (EditText) findViewById(R.id.user_name);
         password_et = (EditText) findViewById(R.id.user_password);
         mProgrssDialog = new ProgressDialog(this);
+        mAuth = FirebaseAuth.getInstance();
+
     }
 
     public void login(View v){
@@ -45,11 +58,6 @@ public class ActivityLogin extends Activity {
     }
 
     private void logIn(){
-
-        mProgrssDialog.setTitle("Log In");
-        mProgrssDialog.setMessage("Please wait....");
-        mProgrssDialog.show();
-
         final String username = username_et.getText().toString();
         final String password = password_et.getText().toString();
 
@@ -66,10 +74,27 @@ public class ActivityLogin extends Activity {
             mProgrssDialog.dismiss();
             return;
         }
+        mAuth.signInWithEmailAndPassword(username, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d(TAG, "signInWithEmail:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            finish();
+                            Intent signUpIntent = new Intent(ActivityLogin.this, MainMenu.class);
+                            startActivity(signUpIntent);
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w(TAG, "signInWithEmail:failure", task.getException());
+                            Toast.makeText(ActivityLogin.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
 
-        finish();
-        Intent signUpIntent = new Intent(this,MainMenu.class);
-        startActivity(signUpIntent);
+                        }
+                    }
+                });
+
     }
 
     @Override
@@ -90,4 +115,9 @@ public class ActivityLogin extends Activity {
         }
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+    }
 }

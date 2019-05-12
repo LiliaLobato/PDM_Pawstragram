@@ -28,7 +28,7 @@
                 android:layout_height="@dimen/icon_height"
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
-                android:onClick="goreturn"
+                android:onClick="goBack"
                 android:src="@drawable/ic_backdark" />
 
             <LinearLayout

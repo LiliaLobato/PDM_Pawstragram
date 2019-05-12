@@ -22,7 +22,9 @@ public class ActivityEditProfile extends Activity {
         setContentView(R.layout.activity_edit_profile);
     }
 
-    public void goreturn(View v) {
-        finish();
+    public void goBack(View v) {
+
+
+       finish();
     }
 }

@@ -25,11 +25,12 @@
         android:layout_height="50dp"
         android:hint="Username"
         android:textColor="#ffffff"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:backgroundTint="#fff"
         android:drawableLeft="@drawable/ic_smile"
         android:id="@+id/user_name"
         android:drawablePadding="10dp"
+        android:inputType="textEmailAddress"
         />
 
 
@@ -38,7 +39,7 @@
         android:layout_height="50dp"
         android:hint="Password"
         android:textColor="#ffffff"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:backgroundTint="#fff"
         android:drawableLeft="@drawable/ic_out"
         android:inputType="textPassword"
