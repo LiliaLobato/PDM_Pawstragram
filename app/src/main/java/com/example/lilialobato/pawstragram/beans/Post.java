@@ -6,11 +6,19 @@ public class Post {
     private String username;
     private Bitmap content;
     private Bitmap profileImage;
+    private Boolean like;
 
     public Post(String username, Bitmap image, Bitmap profileImage) {
         this.username = username;
         this.content = image;
         this.profileImage = profileImage;
+    }
+
+    public Post(String username, Bitmap content, Bitmap profileImage, Boolean like) {
+        this.username = username;
+        this.content = content;
+        this.profileImage = profileImage;
+        this.like = like;
     }
 
     public String getUsername() {
@@ -35,5 +43,13 @@ public class Post {
 
     public void setProfileImage(Bitmap profileImage) {
         this.profileImage = profileImage;
+    }
+
+    public Boolean getLike() {
+        return like;
+    }
+
+    public void setLike(Boolean like) {
+        this.like = like;
     }
 }

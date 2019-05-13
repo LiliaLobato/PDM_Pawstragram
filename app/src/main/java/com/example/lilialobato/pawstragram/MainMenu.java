@@ -5,7 +5,9 @@ import android.app.Activity;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 
@@ -13,9 +15,11 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 
+import com.example.lilialobato.pawstragram.beans.User;
 import com.example.lilialobato.pawstragram.fragments.FragmentHome;
 import com.example.lilialobato.pawstragram.fragments.FragmentProfile;
 import com.example.lilialobato.pawstragram.fragments.FragmentSearch;
+import com.google.gson.Gson;
 
 public class MainMenu extends Activity {
 
@@ -43,6 +47,8 @@ public class MainMenu extends Activity {
         fragmentHome = new FragmentHome();
         fragmentProfile = new FragmentProfile();
         fragmentSearch = new FragmentSearch();
+
+
 
         openMenu(new View(this));
     }

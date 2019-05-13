@@ -5,11 +5,13 @@ import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -68,6 +70,25 @@ public class AdapterPost extends RecyclerView.Adapter<AdapterPost.ViewHolder>{
                 }catch (Exception e){}
             }
         });
+
+        if (mDataSet.get(position).getLike()){
+            holder.like.setBackground(context.getResources().getDrawable(R.drawable.ic_like));
+        }
+
+        holder.like.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    if (!mDataSet.get(position).getLike()){
+                        holder.like.setBackground(context.getResources().getDrawable(R.drawable.ic_like));
+                        mDataSet.get(position).setLike(true);
+                         }
+                } catch (Exception e){
+                    Log.e("test", e.toString());
+                }
+            }
+        });
+
     }
 
     @Override
