@@ -422,7 +422,7 @@
 
             protected void onPostExecute(Bitmap result) {
 
-                dataSet.add(new Post("Bruno", result, profile, false ));
+                dataSet.add(new Post(ActivityLogin.user.getName(), result, profile, false ));
                 mAdapter.notifyDataSetChanged();
             }
         }
