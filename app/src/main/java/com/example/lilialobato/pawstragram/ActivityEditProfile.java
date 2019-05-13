@@ -27,4 +27,8 @@ public class ActivityEditProfile extends Activity {
 
        finish();
     }
+    
+    public void saveChanges(View v){
+
+    }
 }

@@ -28,7 +28,7 @@
                 android:layout_height="@dimen/icon_height"
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
-                android:onClick="goBack"
+                android:onClick="goreturn"
                 android:src="@drawable/ic_backdark" />
 
             <LinearLayout
@@ -78,13 +78,6 @@
                 android:layout_marginRight="5dp"
                 android:text="Edit Photo" />
 
-            <RelativeLayout
-                android:id="@+id/general_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@color/white"
-                android:padding="10dp">
 
                 <TextView
                     android:id="@+id/general_data_tv"
@@ -180,115 +173,20 @@
                     android:textColor="@color/colorGray"
                     android:textSize="15dp" />
 
-
-            </RelativeLayout>
-
-
-            <RelativeLayout
-                android:id="@+id/private_layout"
-                android:layout_width="match_parent"
+            <Button
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/general_layout"
-                android:layout_margin="10dp"
-                android:padding="10dp"
-                android:background="@color/white">
-
-
-                <TextView
-                    android:id="@+id/private_data_tv"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:gravity="center"
-                    android:text="Private Data"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/edit_profile_email_tag"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/private_data_tv"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="5dp"
-                    android:drawablePadding="5dp"
-                    android:paddingTop="5dp"
-                    android:text="EMAIL"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/edit_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/edit_profile_email_tag"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="5dp"
-                    android:drawablePadding="5dp"
-                    android:text="email"
-                    android:textColor="@color/colorGray"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/edit_profile_password_tag"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/edit_email"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="5dp"
-                    android:drawablePadding="5dp"
-                    android:paddingTop="5dp"
-                    android:text="PASSWORD"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/edit_password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/edit_profile_password_tag"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="5dp"
-                    android:drawablePadding="5dp"
-                    android:hint="*********"
-                    android:textSize="15dp" />
-
-                <TextView
-                    android:id="@+id/edit_profile_conf_password_tag"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/edit_password"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="5dp"
-                    android:drawablePadding="5dp"
-                    android:paddingTop="5dp"
-                    android:text="CONFIRM PASSWORD"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="15dp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/edit_conf_password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/edit_profile_conf_password_tag"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="5dp"
-                    android:drawablePadding="5dp"
-                    android:hint="*********"
-                    android:textSize="15dp" />
-
-
-            </RelativeLayout>
+                android:layout_marginTop="30dp"
+                android:id="@+id/save_btn"
+                android:paddingRight="30dp"
+                android:paddingLeft="30dp"
+                android:textSize="20dp"
+                android:text="Save Changes"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_round"
+                android:textAllCaps="true"
+                android:onClick="saveChanges"
+                />
 
         </LinearLayout>
 
@@ -297,3 +195,4 @@
 
 
 </ScrollView>
+
