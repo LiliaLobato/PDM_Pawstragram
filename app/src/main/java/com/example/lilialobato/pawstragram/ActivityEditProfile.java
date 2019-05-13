@@ -25,4 +25,8 @@ public class ActivityEditProfile extends Activity {
     public void goreturn(View v) {
         finish();
     }
+
+    public void saveChanges(View v){
+
+    }
 }
